@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4A902A5C-4501-7025-BEC9-1A2792EF7056}</ProjectGuid>
+    <ProjectGuid>{5AD084D2-EA99-6D6F-A423-B486A0C2DC2D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,35 +58,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ControlaJogador.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
      <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/home/fedora/workspace/Uno/AppWorks/unity_uno/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/home/fedora/workspace/Uno/unity_GameDevClass/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/fedora/Unity/Hub/Editor/2019.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

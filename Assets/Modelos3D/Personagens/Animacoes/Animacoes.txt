@@ -1,4 +1,4 @@
-Idle: 2 - 45
+IdleIdle: 2 - 45
 Andar: 51 - 79
 Correr: 82 - 99
 Sentado no chao: 117 - 146
