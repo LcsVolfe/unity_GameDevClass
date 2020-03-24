@@ -22,16 +22,29 @@ public class ZumbiController : MonoBehaviour
     void FixedUpdate()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 direction = player.transform.position - transform.position;
 
-        if (distance > 2)
+        Quaternion newRotation = Quaternion.LookRotation(direction);
+        GetComponent<Rigidbody>().MoveRotation(newRotation);
+        
+        if (distance > 2.5)
         {
-            Vector3 direction = player.transform.position - transform.position;
             GetComponent<Rigidbody>().MovePosition(
                 GetComponent<Rigidbody>().position + direction.normalized * (velocity * Time.deltaTime)
             );
-            
-            Quaternion newRotation = Quaternion.LookRotation(direction);
-            GetComponent<Rigidbody>().MoveRotation(newRotation);
+            GetComponent<Animator>().SetBool("Attacking", false);
+
         }
+        else
+        {
+            GetComponent<Animator>().SetBool("Attacking", true);
+        }
+    }
+
+    void PlayerAttack()
+    {
+        Time.timeScale = 0;
+        player.GetComponent<PlayerController>().gameOverText.SetActive(true);
+        player.GetComponent<PlayerController>().dead = true;
     }
 }

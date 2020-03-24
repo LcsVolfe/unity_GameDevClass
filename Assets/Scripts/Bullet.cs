@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,5 +19,16 @@ public class Bullet : MonoBehaviour
             position: GetComponent<Rigidbody>().position +
                       transform.forward * (velocity * Time.deltaTime)
         );
+    }
+
+    void OnTriggerEnter(Collider colliderObject)
+    {
+        if (colliderObject.tag == "enemy")
+        {
+            Destroy(colliderObject.gameObject);
+        }
+
+        Destroy(gameObject);
+
     }
 }
