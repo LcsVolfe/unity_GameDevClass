@@ -6,17 +6,19 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float velocity = 20;
-
+    private Rigidbody rigidBodyBullet;
+    
     // Start is called before the first frame update
     void Start()
     {
+        rigidBodyBullet = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition(
-            position: GetComponent<Rigidbody>().position +
+        rigidBodyBullet.MovePosition(
+            position: rigidBodyBullet.position +
                       transform.forward * (velocity * Time.deltaTime)
         );
     }

@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     public GameObject gameOverText;
     public bool dead = false;
-
+    private Rigidbody rigidBodyPlayer;
+    private Animator animatorPlayer;
+    
     private void Start()
     {
         Time.timeScale = 1;
+        rigidBodyPlayer = GetComponent<Rigidbody>();
+        animatorPlayer = GetComponent<Animator>();
     }
 
     void Update()
@@ -26,11 +30,11 @@ public class PlayerController : MonoBehaviour
 
         if (direction != Vector3.zero)
         {
-            GetComponent<Animator>().SetBool("Moving", true);
+            animatorPlayer.SetBool("Moving", true);
         }
         else
         {
-            GetComponent<Animator>().SetBool("Moving", false);
+            animatorPlayer.SetBool("Moving", false);
         }
 
         if (dead == true)
@@ -44,8 +48,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition(
-            GetComponent<Rigidbody>().position + (direction * velocity * Time.deltaTime)
+        rigidBodyPlayer.MovePosition(
+            rigidBodyPlayer.position + (direction * velocity * Time.deltaTime)
         );
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -61,7 +65,7 @@ public class PlayerController : MonoBehaviour
             
             Quaternion newRotation = Quaternion.LookRotation(aimPosition);
             
-            GetComponent<Rigidbody>().MoveRotation(newRotation);
+            rigidBodyPlayer.MoveRotation(newRotation);
         }
     }
 }

@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
 
     public GameObject player;
-    Vector3 distCameraPlayer;
+    private Vector3 distCameraPlayer;
     
     // Start is called before the first frame update
     void Start()

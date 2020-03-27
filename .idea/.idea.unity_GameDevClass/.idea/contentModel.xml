@@ -20,6 +20,7 @@
           <e p="GunController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ZumbiController.cs" t="Include" />
+          <e p="ZumbiGenerator.cs" t="Include" />
         </e>
       </e>
       <e p="Temp/bin" t="ExcludeRecursive" />
