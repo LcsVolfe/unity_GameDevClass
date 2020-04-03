@@ -53,8 +53,6 @@ public class PlayerController : MonoBehaviour
         );
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.green);
-
         RaycastHit impact;
         if (Physics.Raycast(ray, out impact, 100, groundMask))
         {
