@@ -18,7 +18,9 @@
           <e p="Bullet.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="GunController.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="StartTextController.cs" t="Include" />
           <e p="ZumbiController.cs" t="Include" />
           <e p="ZumbiGenerator.cs" t="Include" />
         </e>
