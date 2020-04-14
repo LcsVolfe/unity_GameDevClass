@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Animator animatorPlayer;
     public int life = 100;
     public InterfaceController interfaceControllerScript;
+    public AudioClip damageSound;
+    
     
     private void Start()
     {
@@ -72,6 +74,8 @@ public class PlayerController : MonoBehaviour
     {
         life -= damage;
         interfaceControllerScript.UpdatePlayerLifeSlider();
+        AudioController.instance.PlayOneShot(damageSound);
+        
         if (life <= 0)
         {
             Time.timeScale = 0;

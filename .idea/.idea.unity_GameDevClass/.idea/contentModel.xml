@@ -15,6 +15,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioController.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="GunController.cs" t="Include" />

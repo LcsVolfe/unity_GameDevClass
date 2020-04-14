@@ -7,6 +7,9 @@ public class Bullet : MonoBehaviour
 {
     public float velocity = 20;
     private Rigidbody rigidBodyBullet;
+    public AudioClip deathSound;
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class Bullet : MonoBehaviour
         if (colliderObject.tag == "enemy")
         {
             Destroy(colliderObject.gameObject);
+            AudioController.instance.PlayOneShot(deathSound);
         }
 
         Destroy(gameObject);
