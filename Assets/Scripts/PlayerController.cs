@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 direction;
     public LayerMask groundMask;
     public GameObject gameOverText;
-    public bool dead = false;
     private Rigidbody rigidBodyPlayer;
     private Animator animatorPlayer;
+    public int life = 100;
+    public InterfaceController interfaceControllerScript;
     
     private void Start()
     {
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
             animatorPlayer.SetBool("Moving", false);
         }
 
-        if (dead == true)
+        if (life <= 0)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -60,10 +61,21 @@ public class PlayerController : MonoBehaviour
 
             Vector3 aimPosition = impact.point - transform.position;
             aimPosition.y = transform.position.y;
-            
+
             Quaternion newRotation = Quaternion.LookRotation(aimPosition);
-            
+
             rigidBodyPlayer.MoveRotation(newRotation);
+        }
+    }
+
+    public void PlayerDamage(int damage)
+    {
+        life -= damage;
+        interfaceControllerScript.UpdatePlayerLifeSlider();
+        if (life <= 0)
+        {
+            Time.timeScale = 0;
+            gameOverText.SetActive(true);
         }
     }
 }

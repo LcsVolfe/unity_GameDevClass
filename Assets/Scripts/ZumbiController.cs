@@ -50,8 +50,7 @@ public class ZumbiController : MonoBehaviour
 
     void PlayerAttack()
     {
-        Time.timeScale = 0;
-        player.GetComponent<PlayerController>().gameOverText.SetActive(true);
-        player.GetComponent<PlayerController>().dead = true;
+        int damage = Random.Range(20, 30);
+        player.GetComponent<PlayerController>().PlayerDamage(damage);
     }
 }
