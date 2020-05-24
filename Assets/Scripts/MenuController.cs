@@ -24,8 +24,7 @@ public class MenuController : MonoBehaviour
 
     public void closeGame()
     {
-        Debug.Log(_teste);
-        _teste++;
+        Debug.Log("Fechou!");
         Application.Quit();
     }
 
