@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1600
     height: 809
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 471}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1600
     height: 809
-  m_MinSize: {x: 875, y: 471}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 30
     width: 1600
     height: 759
-  m_MinSize: {x: 911, y: 421}
+  m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 169
+  controlID: 220
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,10 +146,10 @@ MonoBehaviour:
     y: 0
     width: 820
     height: 759
-  m_MinSize: {x: 201, y: 421}
-  m_MaxSize: {x: 4001, y: 8021}
+  m_MinSize: {x: 201, y: 442}
+  m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 170
+  controlID: 221
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,8 +169,8 @@ MonoBehaviour:
     y: 0
     width: 820
     height: 522
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -342,7 +342,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -410,9 +410,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 157.01448, y: 20.616367, z: -56.806747}
+    m_Target: {x: -240.97203, y: 367.43198, z: -297.8825}
     speed: 2
-    m_Value: {x: 157.01448, y: 20.616367, z: -56.806747}
+    m_Value: {x: -240.97203, y: 367.43198, z: -297.8825}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -459,13 +459,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.05759127, y: -0.8983689, z: 0.4174615, w: 0.1239591}
+    m_Target: {x: -0.34385356, y: -0.21908523, z: 0.0828232, w: -0.90937656}
     speed: 2
-    m_Value: {x: 0.057590596, y: -0.8983584, z: 0.41745663, w: 0.12395766}
+    m_Value: {x: -0.34520704, y: -0.21895427, z: 0.083149314, w: -0.9088329}
   m_Size:
-    m_Target: 18.452412
+    m_Target: 6.748258
     speed: 2
-    m_Value: 18.452412
+    m_Value: 6.748258
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -642,10 +642,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 771}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5efbffff
+      m_ExpandedIDs: 5efbffff8e370000983700003e3800003e3900007a3900006c3f00005c440000a0440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -708,21 +708,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Veiculos
+    - Assets/Prefabs/Construcoes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Veiculos
+  - Assets/Prefabs/Construcoes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /home/fedora/workspace/Uno/unity_GameDevClass
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 464d0000
-    m_LastClickedID: 19782
-    m_ExpandedIDs: 00000000284d00002a4d000000ca9a3b
+    m_SelectedIDs: 3c500000
+    m_LastClickedID: 20540
+    m_ExpandedIDs: 00000000245000002650000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -750,7 +750,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000284d00002a4d0000
+    m_ExpandedIDs: 000000002450000026500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 323e00006a4300000c430000b2620000aa620000000000005c5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -802,10 +802,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 29}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 110
+  m_DirectoriesAreaWidth: 126
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
