@@ -19,7 +19,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && (PlayerController.life > 0 || (!GameManager.isPaused)))
         {
             Instantiate(bullet, gunBarrel.transform.position, gunBarrel.transform.rotation);
             AudioController.instance.PlayOneShot(shotSound);

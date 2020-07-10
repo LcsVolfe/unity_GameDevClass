@@ -2,24 +2,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float velocity = 10;
     private Vector3 direction;
     public LayerMask groundMask;
-    public GameObject gameOverText;
     private Rigidbody rigidBodyPlayer;
     private Animator animatorPlayer;
-    public int life = 100;
+    public static int life;
     public InterfaceController interfaceControllerScript;
     public AudioClip damageSound;
-    
-    
+
+    public static int level;
+    public static int zombiesKilled;
+    public static int pickUpItensLeft;
+    public static bool isFinalBossDead;
+
+    //CONTADOR DO LEVEL
+    //PARA O PRIMEIRO LEVEL, TEMOS 2 OPÇÕES, UM CONTADOR DE TEMPO || NUMERO DE KILLS DE ZUMBI
+    //CONTADOR: DEPOIS DE ATINGIR UM TEMPO AUMENTA O LEVEL E DIMINUI O TEMPO DE GERAÇÃO DE ZUMBI
+    //KILLS: NÃO PRECISA MANIPULAR A VELOCIDADE DE GERAÇÃO. CRIA UM CONTADOR DE KILLS AQUI E QUANDO ATINGIR AUMENTA O LVL
+
+    //O SEGUNDO LVL EU IA DEIXA NA MÃO, MAS PEGA UM OBJETO QUALQUER E COLOCA EM UM CANTO COM UMA TAG 'LEVELUP' OU QUALQUER OUTRA
+    //AI VOCE PODE USA ESSA LÓGICA
+
+    /*
+     void OnTriggerEnter(Collider colliderObject)
+    {
+        if (colliderObject.tag == "LEVELUP")
+        {
+            // DESTROI O OBJETO E AUMENTA O  LVL
+            Destroy(colliderObject.gameObject);
+            level++;
+        
+        
+            //ESCOLHE UM SOM E COLOCA ALI SE QUISER EFEITO AO COLETA
+            AudioController.instance.PlayOneShot(deathSound);
+        }
+    }
+    */
+
+
+    //O TERCEIRO LEVEL VC PODE PEGA NO ZUMBIGENERATORCONTROLLER E VE EM QUE LVL TA A CADA INSTANCIA
+    // E SE FOR LVL 3 && TYPE == xx { AUMENTA FORÇA E ATACK... }
+
+
     private void Start()
     {
         Time.timeScale = 1;
+        life = 100;
+        level = 1;
+        zombiesKilled = 0;
+        pickUpItensLeft = 2;
+        isFinalBossDead = false;
         rigidBodyPlayer = GetComponent<Rigidbody>();
         animatorPlayer = GetComponent<Animator>();
     }
@@ -44,7 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                SceneManager.LoadScene("first_scene");
+                GameManager.ReiniciarAPartida();
             }
         }
     }
@@ -73,13 +110,15 @@ public class PlayerController : MonoBehaviour
     public void PlayerDamage(int damage)
     {
         life -= damage;
+        // ALTERAR O VALOR DO TEXTO NO CANVAS
         interfaceControllerScript.UpdatePlayerLifeSlider();
+        interfaceControllerScript.LifeText.text = "" + PlayerController.life;
         AudioController.instance.PlayOneShot(damageSound);
         
         if (life <= 0)
         {
-            Time.timeScale = 0;
-            gameOverText.SetActive(true);
+            GameManager.Pause();
+            interfaceControllerScript.gameOverText.SetActive(true);
         }
     }
 }

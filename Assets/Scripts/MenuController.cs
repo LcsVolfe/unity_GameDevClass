@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
 
-    private float _teste = 1;
+    //private float _teste = 1;
     public string scene = "menu_scene";
     
     

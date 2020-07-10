@@ -8,7 +8,8 @@ public class Bullet : MonoBehaviour
     public float velocity = 20;
     private Rigidbody rigidBodyBullet;
     public AudioClip deathSound;
-    
+    public GameObject zumbiGenerator; //= GameObject.FindGameObjectWithTag("");
+
     
     
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class Bullet : MonoBehaviour
     {
         if (colliderObject.tag == "enemy")
         {
+            PlayerController.zombiesKilled++;
             Destroy(colliderObject.gameObject);
             AudioController.instance.PlayOneShot(deathSound);
         }
